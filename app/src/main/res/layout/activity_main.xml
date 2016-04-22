@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e0eff6"
+    android:background="#e0e0e0"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -14,245 +14,112 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8"
-        android:background="@drawable/custom_bg"
+        android:layout_weight="3"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/corAmarela"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:tag="corAmarela"
-                android:text="Amarelo"
-                android:textColor="#000"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/corVermelha"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:tag="corVermelha"
-                android:text="Vermelho"
-                android:textColor="#000"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/corAzul"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:tag="corAzul"
-                android:text="Azul"
-                android:textColor="#000"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/corPreta"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:tag="corPreta"
-                android:text="Preto"
-                android:textColor="#000"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_weight="4"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.2"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/trianguloamarelo" />
+                    android:layout_marginBottom="8dp"
+                    android:text="Arraste o nome da figura" />
 
                 <TextView
-                    android:id="@+id/nometrianguloamarelo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:id="@+id/nome"
+                    android:layout_width="95dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/custom_bg"
+                    android:elevation="2dp"
                     android:gravity="center"
-                    android:tag="nometrianguloamarelo"
-                    android:text="arraste o nome da figura"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/trianguloCor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/custom_bg"
-                    android:gravity="center"
-                    android:tag="corAmarela"
-                    android:text="arraste a cor"
-                    android:textSize="10sp" />
+                    android:hint="Nome"
+                    android:tag="quadrado"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                <Button
+                    android:layout_marginTop="-50dp"
+                    android:layout_marginBottom="8dp"
+                    android:id="@+id/novojogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/circulopreto" />
-
-                <TextView
-                    android:id="@+id/nomecirculopreto"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/custom_bg"
                     android:gravity="center"
-                    android:tag="nomecirculopreto"
-                    android:text="arraste o nome da figura"
+                    android:onClick="submitNovoJogo"
+                    android:text="Novo jogo"
                     android:textSize="10sp" />
 
-                <TextView
-                    android:id="@+id/circuloCor"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="170dp"
                     android:background="@drawable/custom_bg"
                     android:gravity="center"
-                    android:tag="corPreta"
-                    android:text="arraste a cor"
-                    android:textSize="10sp" />
+                    android:layout_gravity="center">
+
+                    <ImageView
+
+                        android:tag="quadrado"
+                        android:id="@+id/figura"
+                        android:layout_gravity="center"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:src="@drawable/quadradoazul" />
+
+                </LinearLayout>
+
+
+
 
             </LinearLayout>
 
-        </LinearLayout>
 
-        <Button
-            android:id="@+id/novojogo"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="0.3"
-            android:onClick="submitNovoJogo"
-            android:text="Novo jogo"
-            android:textSize="10sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.2"
-            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/quadradoazul" />
+                    android:layout_marginBottom="8dp"
+                    android:text="Arraste a cor da figura" />
 
                 <TextView
-                    android:id="@+id/quadradoNome"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/custom_bg"
-                    android:gravity="center"
-                    android:tag="quadradoNome"
-                    android:text="arraste o nome da figura"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/quadradoCor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/custom_bg"
-                    android:gravity="center"
-                    android:tag="corAzul"
-                    android:text="arraste a cor"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:id="@+id/cor"
+                    android:layout_width="95dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/losangovermelho" />
-
-                <TextView
-                    android:id="@+id/losangoNome"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:background="@drawable/custom_bg"
+                    android:elevation="2dp"
                     android:gravity="center"
-                    android:tag="losangoNome"
-                    android:text="arraste o nome da figura"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:id="@+id/losangoCor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/custom_bg"
-                    android:gravity="center"
-                    android:tag="corVermelha"
-                    android:text="arraste a cor"
-                    android:textSize="10sp" />
+                    android:hint="Cor"
+                    android:tag="quadrado"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -262,68 +129,156 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"
-        android:background="@drawable/custom_bg"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/triangulo"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:tag="nometrianguloamarelo"
-                android:text="Triângulo"
-                android:textColor="#000"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/losango"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:tag="losangoNome"
-                android:text="Losango"
-                android:textColor="#000"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/quadrado"
-                android:layout_width="0dp"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/custom_bg"
+                android:elevation="2dp"
                 android:gravity="center"
-                android:tag="quadradoNome"
+                android:tag="quadrado"
                 android:text="Quadrado"
                 android:textColor="#000"
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/circulo"
-                android:layout_width="0dp"
+                android:id="@+id/corVermelha"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_vermelho"
+                android:elevation="2dp"
                 android:gravity="center"
-                android:tag="nomecirculopreto"
+                android:tag="losango"
+                android:text="Vermelho"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/triangulo"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/custom_bg"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:tag="triangulo"
+                android:text="Triângulo"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/corPreta"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_preto"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:tag="circulo"
+                android:text="Preto"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/retangulo"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_bg"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:tag="retangulo"
+                android:text="Retângulo"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/corAmarela"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_amarelo"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:tag="triangulo"
+                android:text="Amarelo"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/circulo"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/custom_bg"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:tag="circulo"
                 android:text="Círculo"
                 android:textColor="#000"
                 android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/corAzul"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/bg_azul"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:tag="quadrado"
+                android:text="Azul"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/losango"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/custom_bg"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:tag="losango"
+                android:text="Losango"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/corVerde"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_verde"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:tag="retangulo"
+                android:text="Verde"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>
