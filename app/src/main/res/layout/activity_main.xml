@@ -59,7 +59,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:layout_marginTop="-50dp"
+                    android:layout_marginTop="-10dp"
                     android:layout_marginBottom="8dp"
                     android:id="@+id/novojogo"
                     android:layout_width="wrap_content"

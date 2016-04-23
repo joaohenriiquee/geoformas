@@ -159,7 +159,7 @@ public class MainActivity extends Activity {
 
                         Context context = getApplicationContext();
                         int duration = Toast.LENGTH_SHORT;
-                        if (countDrag < 9) {
+                        if (countDrag < 10) {
                             CharSequence text = "Parabéns! Você acertou.";
                             Toast toast = Toast.makeText(context, text, duration);
                             toast.show();
